@@ -1,0 +1,994 @@
+/*$$$$$$$$$$$$$$$$$$$*/
+/*Container*/
+/*Bloc Principal*/
+.container-page4 {
+    @include flex-center-column;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: $creme;
+
+    nav {
+        @include flex-center-column;
+        top: 20px;
+        left: 20px;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+
+        a {
+            border-radius: 50%;
+            filter: invert(12%) sepia(12%) saturate(3230%) hue-rotate(175deg) brightness(97%) contrast(108%); 
+
+            img {
+                border-radius: 50%;
+                width: 50px;
+            }
+        }
+
+        a:hover {
+            filter: invert(43%) sepia(39%) saturate(6415%) hue-rotate(132deg) brightness(95%) contrast(102%); 
+        }
+    }
+
+}
+
+
+/*TITRE PRINCIPAL*/
+.container-page4__header-page4 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: $creme;
+    padding-bottom: 50px;
+
+    h1 {
+        @include flex-center-column;
+        text-align: center;
+        background-color: $bleu;
+        color: $creme;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.2em;
+        padding: 0.5em 0.5em 1em;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        box-shadow: 2px 2px 15px black;
+    }
+    span {
+        margin-top: 1em;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 20px;
+        width: 70%;
+    }
+
+
+    /*MOUVEMENT SOURIS*/
+    .barre {
+        position: relative;
+        overflow: hidden;
+        // margin: 60px 0 0 -60px;
+        left: -60px;
+        top: 100px;
+        width: 15px;
+        height: 70px;
+        background-color: $vert1;
+        border: 0;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+    
+        .point {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: $bleu;
+            border-radius: 50%;
+            animation: slide-bottom-mouse 2s ease-in infinite;
+        }
+        @include slide-bottom-mouse(70px)
+    }
+
+}
+
+/*§§§§§§§§§§§§§§§§*/
+/*TOP SECTION */
+.container-page4__top-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px;
+    background-color: $creme;
+
+    .top-section-logos {
+        @include flex-Center;
+        flex-wrap: wrap;
+        margin-bottom: 2em;
+
+        img {
+            width: 200px;
+            margin: 1em;
+            background-color: white;
+            border: solid 1px $vert1;
+            border-radius: 10px;
+        }
+    }
+}
+
+
+/*####################################*/
+/*########## COMMENT-SECTION #########*/
+/*####################################*/
+.container-page4__comment-section {
+    @include flex-center-column;
+    background-color: $creme;
+    padding-bottom: 150px;
+    width: 100%;
+
+    .box-comment{
+        @include flex-center-column;
+        max-width: 60%;
+        background-color: $saumon;
+        padding: 4em 2em;
+        margin-bottom: 100px;
+        border-radius: 15px;
+        box-shadow: 2px 2px 15px $bleu;
+        @media only screen and (max-width:1100px){
+            max-width: 80%;
+        }
+        @media only screen and (max-width:900px){
+            margin-bottom: 200px;
+            padding: 4em 1em;
+        }
+        @media only screen and (max-width:700px){
+            margin-bottom: 200px;
+            padding: 2em 0.5em;
+        }
+        @media only screen and (max-width:500px){
+            margin-bottom: 150px;
+            padding: 2em 0.5em;
+        }
+
+        .logo-profil_box-comment{
+            @include flex-Center;
+            justify-content: space-between;
+            width: 90%;
+            @media only screen and (max-width:500px){
+            @include flex-center-column;
+            }
+            img{
+                width:150px;
+            }
+
+            h4{
+                font-size: 22px;
+                color: $bleu;
+                text-align: center;
+                @media only screen and (max-width:500px){
+                    margin-top: 20px;
+                    font-size: 16px;}
+            }
+        }
+
+        .text_box-comment{
+            display: flex;
+            margin-top: 3em;
+            width: 100%;
+            @media only screen and (max-width:500px){
+                margin-top: 1em;
+            }
+
+            img{
+                width: 60px;
+                height: 60px;
+                margin: 0 1em;
+                @media only screen and (max-width:900px){
+                    width: 40px;
+                    height: 40px;
+                }
+                @media only screen and (max-width:500px){
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+            #citation-haut {
+                margin-top: -15px;
+            }
+
+            #citation-bas {
+                align-self: self-end;
+                margin-bottom: -15px;
+            }
+
+            p{
+                max-width: 600px;
+                font-size: 18px;
+                color: $bleu;
+                font-weight: 300;
+                text-align: justify;
+                @media only screen and (max-width:500px){
+                font-size: 14px;
+                text-align: center;
+            }
+            }
+        }
+    }
+}
+
+
+/*####################################*/
+/*########## BOTTOM-SECTION #########*/
+/*####################################*/
+.container-page4__bottom-section {
+    @include flex-center-column;
+    width: 100%;
+
+
+    .vert3-part {
+        @include flex-center-column;
+        width: 80%;
+        background-color: $vert3;
+        padding-top: 200px;
+        // margin-top: -150px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        position: relative;
+        box-shadow: 3px -3px 15px $bleu;
+
+        img {
+            position: absolute;
+            width: 300px;
+            top: -150px;
+            filter: none;
+        }
+        
+
+        h3 {
+            font-size: 36px;
+            color: $bleu;
+            text-align: center;
+            margin: 1em 0;
+            width: 80%;
+        }
+
+        .avantages {
+            @include flex-Center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-bottom: 3em;
+
+            .avantages-part {
+                @include flex-center-column;
+                // width: 25%;
+
+                img {
+                    position: static;
+                    width: 60px;
+                    filter: invert(9%) sepia(69%) saturate(1246%) hue-rotate(188deg) brightness(93%) contrast(103%);
+                    margin-top: 1em;
+                }
+
+                p {
+                    margin-top: 1em;
+                    text-align: center;
+                    font-weight: 300;
+                    font-size: 20px;
+                    line-height: 24px;
+                    color: $creme;
+                    margin: 1em 0;
+                    width: 75%;
+                }
+            }
+        }
+    }
+    @include anim-logo(18s);
+
+
+
+
+    .vert1-part {
+        @include flex-Center;
+        width: 100%;
+        background-color: $vert1;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+
+        .footer__logo  {
+            @include flex-Center;
+            width: 50%;
+
+
+            img {
+                width: 350px;
+                position: static;
+                filter: none;
+                margin-left: 20px;
+            }
+        }
+
+        .footer__texts {
+            width: 50%;
+            @include flex-center-column;
+
+            h3 {
+                color: $creme;
+                margin: 1em 0 0.5em;
+            }
+
+            a {
+                text-align: center;
+                text-decoration: none;
+                color: $creme;
+                text-align: center;
+                font-weight: 300;
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+            a:hover {
+                color: $bleu;
+                font-weight: 500;
+            }
+
+
+            .footer-lien {
+                @include flex-Center;
+                margin-bottom: 1em ;
+
+                img {
+                    position: static;
+                    width: 20px;
+                    margin-left: 10px;
+                    filter: invert(9%) sepia(69%) saturate(1246%) hue-rotate(188deg) brightness(93%) contrast(103%);
+
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/*§§§§§§§§§§§§§§§§§§§§*/
+                                        /*§§§§§§§§§§§§§§§§§§§§*/
+/*§§§§§§§§§§§§§§§§§§§§*/
+                                        /*§§§§§§§§§§§§§§§§§§§§*/
+/*RESPONSIVE DESIGN*/
+                                        /*§§§§§§§§§§§§§§§§§§§§*/
+/*§§§§§§§§§§§§§§§§§§§§*/
+                                        /*§§§§§§§§§§§§§§§§§§§§*/
+/*§§§§§§§§§§§§§§§§§§§§*/
+
+
+
+
+/*$$$$$$$$$$$$$$$$$$$*/
+/*Container 900px*/
+/*Bloc Principal 900px*/
+@media only screen and (max-width:900px){
+    .container-page4 {
+        @include flex-center-column;
+        width: 100%;
+        height: 100%;
+
+        nav {
+            flex-direction: row;
+            width: 120px;
+            justify-content: space-between;
+            top: 220px;
+            left: 80px;
+            height: 100px;
+
+            a {
+                text-align: center;
+                font-size: 20px;
+                margin-bottom: 1em;
+            }
+
+            a:hover {
+                color: $vert1;
+                font-size: 22px;
+            }
+        }
+
+    }
+
+
+    /*TITRE PRINCIPAL 900px*/
+    .container-page4__header-page4 {
+        justify-content: center;
+        width: 100%;
+        padding-bottom: 150px;
+
+        h1 {
+            @include flex-center-column;
+            text-align: center;
+            font-size: 30px;
+            line-height: 1.2em;
+            padding: 0.5em 0.5em 1em;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            box-shadow: 2px 2px 15px black;
+        }
+        span {
+            margin-top: 1em;
+            font-size: 20px;
+            line-height: 20px;
+            width: 70%;
+        }
+
+
+        /*MOUVEMENT SOURIS 900px*/
+        .barre {
+            left: -60px;
+            top: 60px;
+            width: 15px;
+            height: 70px;
+            border-radius: 10px;
+        
+            .point {
+                width: 5px;
+                height: 5px;
+            }
+        }
+    }
+
+    /*§§§§§§§§§§§§§§§§*/
+    /*TOP SECTION 900px*/
+    .container-page4__top-section {
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        padding-bottom: 50px;
+
+        .top-section-logos {
+            @include flex-Center;
+            flex-wrap: wrap;
+
+            img {
+                width: 200px;
+                margin: 1em;
+            }
+        }
+    }
+
+
+    /*§§§§§§§§§§§§§§§§*/
+    /*Conclusion 900px*/
+    .container-page4__bottom-section {
+        @include flex-center-column;
+        width: 100%;
+
+
+        .vert3-part {
+            @include flex-center-column;
+            width: 80%;
+            padding-top: 200px;
+            margin-top: -150px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            box-shadow: 3px -3px 15px $bleu;
+
+            img {
+                position: absolute;
+                width: 260px;
+                top: -130px;
+            }
+            
+
+            h3 {
+                font-size: 34px;
+                text-align: center;
+                margin: 0.2em 0 1em;
+                width: 80%;
+            }
+
+            .avantages {
+                @include flex-Center;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                width: 100%;
+                margin-bottom: 3em;
+
+                .avantages-part {
+                    @include flex-center-column;
+
+                    img {
+                        width: 60px;
+                        margin-top: 1em;
+                    }
+
+                    p {
+                        margin-top: 1em;
+                        text-align: center;
+                        font-size: 20px;
+                        line-height: 24px;
+                        margin: 1em 0;
+                        width: 75%;
+                    }
+                }
+            }
+        }
+
+
+
+
+        .vert1-part {
+            @include flex-Center;
+            flex-wrap: wrap;
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+
+            .footer__logo  {
+                @include flex-Center;
+                width: 100%;
+
+
+                img {
+                    width: 350px;
+                    margin-left: 0;
+                    margin-top: 40px;
+                }
+            }
+
+            .footer__texts {
+                width: 100%;
+                @include flex-center-column;
+                margin-bottom: 40px;
+
+                h3 {
+                    margin: 1.5em 0 1em;
+                }
+
+                a {
+                    text-align: center;
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+
+                a:hover {
+                    font-weight: 500;
+                }
+
+
+                .footer-lien {
+                    @include flex-Center;
+                    margin-bottom: 1em ;
+
+                    img {
+                        width: 20px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+/*$$$$$$$$$$$$$$$$$$$*/
+/*Container 700px*/
+/*Bloc Principal 700px*/
+@media only screen and (max-width:700px){
+    .container-page4 {
+        @include flex-center-column;
+        width: 100%;
+        height: 100%;
+
+        nav {
+            // @include flex-center-column;
+            top: 180px;
+            left: 80px;
+            // width: 100px;
+            height: 100px;
+
+            a {
+                text-align: center;
+                font-size: 18px;
+                margin-bottom: 1em;
+            }
+
+            a:hover {
+                color: $vert1;
+                font-size: 20px;
+            }
+        }
+
+    }
+
+
+    /*TITRE PRINCIPAL 700px*/
+    .container-page4__header-page4 {
+        justify-content: center;
+        width: 100%;
+        padding-bottom: 150px;
+
+        h1 {
+            @include flex-center-column;
+            text-align: center;
+            font-size: 26px;
+            line-height: 1.2em;
+            padding: 0.5em 0.5em 1em;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            box-shadow: 2px 2px 15px black;
+        }
+        span {
+            margin-top: 1em;
+            font-size: 18px;
+            line-height: 20px;
+            width: 70%;
+        }
+
+
+        /*MOUVEMENT SOURIS 700px*/
+        .barre {
+            left: -60px;
+            top: 60px;
+            width: 15px;
+            height: 70px;
+            border-radius: 10px;
+        
+            .point {
+                width: 5px;
+                height: 5px;
+            }
+        }
+    }
+
+    /*§§§§§§§§§§§§§§§§*/
+    /*TOP SECTION 700px*/
+    .container-page4__top-section {
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        padding-bottom: 50px;
+
+        .top-section-logos {
+            @include flex-Center;
+            flex-wrap: wrap;
+
+            img {
+                width: 160px;
+                margin: 1em;
+            }
+        }
+    }
+
+
+    /*§§§§§§§§§§§§§§§§*/
+    /*Conclusion 700px*/
+    .container-page4__bottom-section {
+        @include flex-center-column;
+        width: 100%;
+
+
+        .vert3-part {
+            @include flex-center-column;
+            width: 80%;
+            padding-top: 140px;
+            margin-top: -150px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            box-shadow: 3px -3px 15px $bleu;
+
+            img {
+                position: absolute;
+                width: 200px;
+                top: -100px;
+            }
+            
+
+            h3 {
+                font-size: 30px;
+                text-align: center;
+                margin: 0.2em 0 1em;
+                width: 80%;
+            }
+
+            .avantages {
+                @include flex-Center;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                width: 100%;
+                margin-bottom: 3em;
+
+                .avantages-part {
+                    @include flex-center-column;
+
+                    img {
+                        width: 60px;
+                        margin-top: 1em;
+                    }
+
+                    p {
+                        margin-top: 1em;
+                        text-align: center;
+                        font-size: 18px;
+                        line-height: 24px;
+                        margin: 1em 0;
+                        width: 75%;
+                    }
+                }
+            }
+        }
+
+
+
+
+        .vert1-part {
+            @include flex-Center;
+            flex-wrap: wrap;
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+
+            .footer__logo  {
+                @include flex-Center;
+                width: 100%;
+
+
+                img {
+                    width: 320px;
+                    margin-left: 0;
+                    margin-top: 40px;
+                }
+            }
+
+            .footer__texts {
+                width: 100%;
+                @include flex-center-column;
+                margin-bottom: 40px;
+
+                h3 {
+                    margin: 1.5em 0 1em;
+                }
+
+                a {
+                    text-align: center;
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+
+                a:hover {
+                    font-weight: 500;
+                }
+
+
+                .footer-lien {
+                    @include flex-Center;
+                    margin-bottom: 1em ;
+
+                    img {
+                        width: 20px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+/*$$$$$$$$$$$$$$$$$$$*/
+/*Container 500px*/
+/*Bloc Principal 500px*/
+@media only screen and (max-width:500px){
+    .container-page4 {
+        @include flex-center-column;
+        width: 100%;
+        height: 100%;
+
+        nav {
+            // @include flex-center-column;
+            top: 210px;
+            left: 40px;
+            width: 100px;
+            height: 100px;
+
+            a {
+                text-align: center;
+                font-size: 16px;
+                margin-bottom: 1em;
+                img {
+                    width: 40px;
+                }
+            }
+
+            a:hover {
+                color: $vert1;
+                font-size: 18px;
+            }
+        }
+
+    }
+
+
+    /*TITRE PRINCIPAL 500px*/
+    .container-page4__header-page4 {
+        justify-content: center;
+        width: 100%;
+        padding-bottom: 150px;
+
+        h1 {
+            width: 90%;
+            @include flex-center-column;
+            text-align: center;
+            font-size: 22px;
+            line-height: 1.2em;
+            padding: 0.5em 0em 1em;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            box-shadow: 2px 2px 15px black;
+        }
+        span {
+            margin-top: 1em;
+            font-size: 16px;
+            line-height: 20px;
+            width: 70%;
+        }
+
+
+        /*MOUVEMENT SOURIS 500px*/
+        .barre {
+            left: -50px;
+            top: 230px;
+            width: 12px;
+            height: 50px;
+            border-radius: 10px;
+        
+            .point {
+                width: 5px;
+                height: 5px;
+            }
+        }
+    }
+
+    /*§§§§§§§§§§§§§§§§*/
+    /*TOP SECTION 500px*/
+    .container-page4__top-section {
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        padding-bottom: 50px;
+
+        .top-section-logos {
+            @include flex-Center;
+            flex-wrap: wrap;
+
+            img {
+                width: 140px;
+                margin: 1em;
+            }
+        }
+    }
+
+
+    /*§§§§§§§§§§§§§§§§*/
+    /*Conclusion 500px*/
+    .container-page4__bottom-section {
+        @include flex-center-column;
+        width: 100%;
+
+
+        .vert3-part {
+            @include flex-center-column;
+            width: 80%;
+            padding-top: 110px;
+            margin-top: -150px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            box-shadow: 3px -3px 15px $bleu;
+
+            img {
+                position: absolute;
+                width: 140px;
+                top: -70px;
+            }
+            
+
+            h3 {
+                font-size: 22px;
+                text-align: center;
+                margin: 0.2em 0 1em;
+                width: 80%;
+            }
+
+            .avantages {
+                @include flex-Center;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                width: 100%;
+                margin-bottom: 3em;
+
+                .avantages-part {
+                    @include flex-center-column;
+
+                    img {
+                        width: 40px;
+                        margin-top: 1em;
+                    }
+
+                    p {
+                        margin-top: 1em;
+                        text-align: center;
+                        font-size: 16px;
+                        line-height: 24px;
+                        margin: 1em 0;
+                        width: 75%;
+                    }
+                }
+            }
+        }
+
+
+
+
+        .vert1-part {
+            @include flex-Center;
+            flex-wrap: wrap;
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius:10px;
+
+            .footer__logo  {
+                @include flex-Center;
+                width: 100%;
+
+
+                img {
+                    width: 190px;
+                    margin-left: 0;
+                    margin-top: 40px;
+                }
+            }
+
+            .footer__texts {
+                width: 100%;
+                @include flex-center-column;
+                margin-bottom: 30px;
+
+                h3 {
+                    margin: 1.5em 0.5em 1em;
+                    width: 90%;
+                }
+
+                a {
+                    text-align: center;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+
+                a:hover {
+                    font-weight: 500;
+                }
+
+
+                .footer-lien {
+                    @include flex-Center;
+                    margin-bottom: 1em ;
+
+                    img {
+                        width: 20px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
