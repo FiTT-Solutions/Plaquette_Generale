@@ -1162,6 +1162,9 @@ body {
   font-size: 24px;
   margin-bottom: 6px;
 }
+.container-page2__bottom-section .left-slice-formule h4 .lien-cpe {
+  color: #fffce5;
+}
 .container-page2__bottom-section .left-slice-formule .details .support-image-2 {
   float: left;
   display: flex;
