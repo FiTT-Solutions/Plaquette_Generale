@@ -160,39 +160,63 @@ body {
             border-bottom : solid 4px $violet;
             border-right : solid 2px $violet;
             color: $violet;
-            background-color: #fffff2;
+            background-color: #fffff8;
             font-size: 18px;
-            // text-shadow: 0.5px 0.5px 0.5px $bleu;
+            box-shadow: -0.2px -0.2px 15px lightgray;
+        }
+        a:hover {
+            border: solid 2px $violet;
+            box-shadow: 4px 4px 7px $bleu;
         }
 
-        #a1 {
+        #a-web {
             margin-right: 40%;
-            color: $vert1;
-            border-bottom : solid 4px $vert1;
-            border-right : solid 2px $vert1;
-        }
-
-        #a1:hover {
-            border: solid 2px $vert1;
-        }
-
-
-        #a2 {
-            margin-right: 20%;
             color: $bleu;
             border-bottom : solid 4px $bleu;
             border-right : solid 2px $bleu;
         }
 
-        #a2:hover {
+        #a-web:hover {
             border: solid 2px $bleu;
         }
 
 
-        a:hover {
-            border: solid 2px $violet;
-            box-shadow: 4px 4px 7px $bleu;
+        #a-generale {
+            margin-right: 30%;
+            color: $saumon;
+            // text-shadow: 0.2px 0.2px 0.5px black;
+            border-bottom : solid 4px $saumon;
+            border-right : solid 2px $saumon;
         }
+
+        #a-generale:hover {
+            border: solid 2px $saumon;
+        }
+
+        #a-offres {
+            margin-right: 20%;
+            color: $vert1;
+            border-bottom : solid 4px $vert1;
+            border-right : solid 2px $vert1;
+        }
+
+        #a-offres:hover {
+            border: solid 2px $vert1;
+        }
+
+        #a-cpe {
+            margin-right: 10%;
+            color: $violet;
+            border-bottom : solid 4px $violet;
+            border-right : solid 2px $violet;
+        }
+
+        #a-cpe:hover {
+            border: solid 2px $violet;
+        }
+
+
+
     }@include opac-douce;
 
 
@@ -329,16 +353,20 @@ body {
                 font-size: 18px;
             }
 
-            #a1 {
-                margin-right: 20%;
+            #a-web {
+                margin-right: 30%;
             }
     
-            #a2 {
-                margin-right: 0;
+            #a-generale {
+                margin-right: 10%;
             }
 
-            #a3 {
-                margin-right: -20%;
+            #a-offres {
+                margin-right: -10%;
+            }
+
+            #a-cpe {
+                margin-right: -30%;
             }
         }@include opac-douce;
 
@@ -476,18 +504,6 @@ body {
                 border-right : solid 2px $violet;
                 font-size: 16px;
             }
-
-            #a1 {
-                margin-right: 20%;
-            }
-    
-            #a2 {
-                margin-right: 0;
-            }
-
-            #a3 {
-                margin-right: -20%;
-            }
         }
 
 
@@ -619,24 +635,28 @@ body {
 
             a {
                 @include flex-Center;
-                width: 260px;
-                height: 36px;
+                width: 250px;
+                height: 34px;
                 border-bottom : solid 4px $violet;
                 border-right : solid 2px $violet;
                 border-radius: 10px;
                 font-size: 12px;
             }
 
-            #a1 {
-                margin-right: 10%;
+            #a-web {
+                margin-right: 15%;
             }
     
-            #a2 {
-                margin-right: 0;
+            #a-generale {
+                margin-right: 5%;
             }
 
-            #a3 {
-                margin-right: -10%;
+            #a-offres {
+                margin-right: -5%;
+            }
+
+            #a-cpe {
+                margin-right: -15%;
             }
         }
 
